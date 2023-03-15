@@ -1,3 +1,121 @@
+/* Loader */
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 999;
+    display: grid;
+    place-items:center;
+    overflow: hidden;
+    animation: end .5s linear forwards 2.5s ;
+}
+@keyframes end{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.loader img{
+    position: absolute;
+    opacity: 0;
+    animation: pop-up linear .5s forwards 2s;
+}
+@keyframes pop-up{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.loader .line{
+    opacity: 0;
+}
+.loader .line:nth-child(1){
+    height: .1cm;
+    width: 2cm;
+    border-radius: 4px;
+    background-color: #98dad9;
+    position: absolute;
+    top: 58%;
+    animation: go-first linear .5s forwards;
+}
+@keyframes go-first{
+    from{
+        transform: translateX(-2.5cm);
+    }
+    to{
+        transform: translateX(0cm);
+        opacity: 1;
+    }
+}
+.loader .line:nth-child(2){
+    height: 2cm;
+    width: .1cm;
+    border-radius: 4px;
+    background-color: #98dad9;
+    position: absolute;
+    right: 46%;
+    animation: go-third linear .5s forwards 1s;
+}
+@keyframes go-third{
+    from{
+        transform: translateY(2.5cm);
+    }
+    to{
+        transform: translateY(0cm);
+        opacity: 1;
+    }
+}
+
+.loader .line:nth-child(4){
+    height: 2cm;
+    width: .1cm;
+    border-radius: 4px;
+    background-color: #98dad9;
+    position: absolute;
+    left: 46%;
+    animation: go-fourth linear .5s forwards 1.5s;
+}
+@keyframes go-fourth{
+    from{
+        transform: translateY(2.5cm);
+    }
+    to{
+        transform: translateY(0cm);
+        opacity: 1;
+    }
+}
+.loader .line:nth-child(5){
+    height: .1cm;
+    width:  2cm;
+    border-radius: 4px;
+    background-color: #98dad9;
+    position: absolute;
+    bottom : 58%;
+    animation: go-second linear .5s forwards .5s;
+}
+@keyframes go-second{
+    from{
+        transform: translateX(-2.5cm);
+    }
+    to{
+        transform: translateX(0cm);
+        opacity: 1;
+    }
+}
+.loader .line:nth-child(odd) {
+    transform: translateX(-2.5cm);
+}  
+.loader .line:nth-child(even) {
+    transform: translateY(2.5cm);
+}  
+
+
+
 /* Header styling */
 header{
     position:fixed;
