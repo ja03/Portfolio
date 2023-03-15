@@ -92,6 +92,17 @@ body{
     #projects-section{
         padding: 0 4rem;
     }
+    .loader {
+    /* scale: 1.1; */
+    transform: translateX(-6%);
+    }
+    .e-mail, .social{
+        display: none ;
+        }
+    .social-xs{
+        display: flex;
+    }
+    
 }
 @media screen and (max-width:768px){
     
@@ -121,12 +132,7 @@ body{
         background-position: center;
         background-size: cover;
     }
-    .e-mail, .social{
-        display: none ;
-        }
-    .social-xs{
-        display: flex;
-    }
+    
     
 }
 
