@@ -40,6 +40,7 @@
             <nav class="container">
                 <div class="row">
                     <div
+                        id="logo"
                         class="col-xs-6 col-lg-3"
                         data-aos="fade-up"
                         data-aos-delay="500"
@@ -90,14 +91,14 @@
                         </div>
                     </div>
                     <div
+                        id="resume"
                         class="col-xs-6 col-lg-3 flex-content-end"
                         data-aos="fade-up"
                         data-aos-delay="2400"
                         data-aos-duration="1000"
                         data-aos-once="true">
                         <a
-                            href="https://drive.google.com/file/d/1I8CeS-WT1TyMMKlhc4tyv3Tkaje0ceZr/view?usp=sharing"
-                            id="resume">
+                            href="https://drive.google.com/file/d/1I8CeS-WT1TyMMKlhc4tyv3Tkaje0ceZr/view?usp=sharing">
                             RESUME
                         </a>
                     </div>
@@ -114,6 +115,7 @@
                     data-aos-duration="1000"
                     data-aos-once="true">
                     <p
+                        id="hello"
                         data-aos="fade-up"
                         data-aos-delay="2600"
                         data-aos-duration="700"
@@ -121,6 +123,7 @@
                         Hello there, my name is
                     </p>
                     <h1
+                        id="myName"
                         data-aos="fade-up"
                         data-aos-delay="2800"
                         data-aos-duration="700"
@@ -132,7 +135,8 @@
                         data-aos="fade-up"
                         data-aos-delay="3000"
                         data-aos-duration="700"
-                        data-aos-once="true">
+                        data-aos-once="true"
+                        id="infoAboutMe">
                         I'm a computer science student who has fallen in love
                         with building and designing websites. I'm most focused
                         on frontend development and building beautiful,
@@ -246,7 +250,7 @@
                         data-aos-delay="0"
                         data-aos-duration="1000"
                         data-aos-once="true">
-                        <span>02. </span> Where I've Worked
+                        <span>02. </span> Wher I've Worked
                     </h2>
                     <div class="row" id="work-area">
                         <div
@@ -275,7 +279,7 @@
                                 data-aos-once="true">
                                 Online C++ Teacher, 9afi - Tutor <br />
                                 <spna id="work-date"
-                                    >Amman-Jordan • Nov /2022 - Jan/2023</spna
+                                    >Amman-Jordan • 11/2022 - 1/2023</spna
                                 >
                             </h3>
                             <ul
@@ -583,6 +587,24 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
+            const myInfo = document.getElementById("infoAboutMe");
+            const myLogo = document.getElementById("logo");
+            const myResume = document.getElementById("resume");
+            const myHello = document.getElementById("hello");
+            const myName = document.getElementById("myName");
+            const myMessage = document.getElementById("welcoming-messege");
+            function handleResize() {
+                if (window.innerWidth < 768) {
+                    myMessage.setAttribute("data-aos-delay", 100);
+                    myInfo.setAttribute("data-aos-delay", 900);
+                    myLogo.setAttribute("data-aos-delay", 100);
+                    myResume.setAttribute("data-aos-delay", 300);
+                    myHello.setAttribute("data-aos-delay", 500);
+                    myName.setAttribute("data-aos-delay", 700);
+                }
+            }
+
+            window.addEventListener("resize", handleResize);
         </script>
     </body>
 </html>

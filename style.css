@@ -55,7 +55,7 @@ nav .links li:hover::before{
 transform: translateX(-75%);
 }
 
-nav #resume{
+nav #resume a{
     color: var(--title-color);
     text-decoration: none;
     font-size: var(--font-heading5);
@@ -64,7 +64,7 @@ nav #resume{
     border-radius: 8px;
     transition: background-color linear .2s;
 }
-nav #resume:hover{
+nav #resume a:hover{
     background-color: #98dad945;
 }
 
